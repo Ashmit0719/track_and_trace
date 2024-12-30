@@ -20,7 +20,11 @@ sap.ui.define([
         onsplitDealerclick: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("Routedealerscreen");
+        },
+        
+        onclickDashboard: function () {
+            var oDashboard = sap.ui.core.UIComponent.getRouterFor(this);
+            oDashboard.navTo("RouteinventoryDashboard");
         }
-     
     });
 });

@@ -3,7 +3,7 @@ sap.ui.define([
 ], (Controller) => {
     "use strict";
 
-    return Controller.extend("app.home.controller.dealersidescreen", {
+    return Controller.extend("app.home.controller.inventoryDashboard", {
         onInit() {
            
         },});

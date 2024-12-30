@@ -52,6 +52,21 @@
                     />
                 </TileContent>
             </GenericTile>
+
+             <GenericTile
+                id="boxQr1e"
+                class="sapUiMediumMargin"
+                header="Inventory Dashboard"
+                subheader="Dashboard Screen"
+                press="onclickDashboard"
+            >
+                <TileContent id="_IDGenTileContent22d">
+                    <ImageContent
+                        id="_IDGenImageContent2d2"
+                        src="sap-icon://qr-code"
+                    />
+                </TileContent>
+            </GenericTile>
         </content>
     </Page>
 </mvc:View>
