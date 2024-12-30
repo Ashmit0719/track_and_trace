@@ -1,0 +1,10 @@
+<mvc:View
+    controllerName="app.home.controller.dealersidescreen"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="dealerSideScreenPage" title="Dealer Side Screen">
+        <content>
+            <Text id="_IDGenText" text="Dealer Side Screen Content Goes Here" />
+        </content>
+    </Page>
+</mvc:View>

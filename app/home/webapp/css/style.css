@@ -1,0 +1,41 @@
+/* Enter your custom styles here */
+
+/* Enter your custom styles here */
+
+.dashboardTable th{
+    border: 1px solid #ddd;
+    background-color: #e9f6f7;
+}
+.dashboardTable td{
+    border: 1px solid #ddd;
+}
+.borderedTable .borderedRow .sapMListTblCell,.OCborderedTable .borderedRow .sapMListTblCell {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 3px;
+}
+.borderedTable .sapUiSizeCompact .sapMListTblNavCol, .sapUiSizeCompact .sapMListTblSelCol,.OCborderedTable .sapUiSizeCompact .sapMListTblNavCol, .sapUiSizeCompact .sapMListTblSelCol{
+    border-left: 1px solid #ddd;
+}
+
+.borderedTable .sapMListTblHeaderCell,.OCborderedTable .sapMListTblHeaderCell {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.submitBtnBox{
+    display: flex;
+    justify-content: end;
+}
+
+.qrImage{
+    margin: 88px;
+}
+
+
+.tableBorder {
+    border-collapse: separate; 
+    border-spacing: 0; 
+    border-radius: 8px; 
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }

@@ -1,0 +1,194 @@
+<mvc:View
+    controllerName="app.home.controller.boxQrGeneration"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    displayBlock="true"
+    xmlns:table="sap.ui.table"
+    busyIndicatorDelay="0"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:f="sap.f"
+>
+    <tnt:ToolHeader
+        id="boxQr_mainToolheaded"
+        class="sapUiSmallMarginBegin sapUiSmallMarginEnd sapUiSmallMarginTop"
+    >
+        <ToolbarSpacer
+            id="boxQr_mainToolbarSpacer"
+            width="15px"
+        />
+        <Title
+            id="boxQr_Title_FieldDefinition"
+            text="Box Qr Generation"
+            wrapping="true"
+            level="H3"
+        />
+        <ToolbarSpacer id="cgcConfig_ToolbarSpacer" />
+        <Button
+            id="boxQr_Button_CreateQr"
+            text="Generate Qr Code"
+            width="150px"
+            press="onGenarteQr"
+            type="Emphasized"
+            visible="true"
+        />
+    </tnt:ToolHeader>
+
+    <!-- Toolbar for Selection -->
+    <l:VerticalLayout
+        id="boxQr_hVerticalLayout"
+        width="100%"
+    >
+        <l:BlockLayout
+            id="boxQr_BlochkLayout"
+            background="Dashboard"
+        >
+            <l:BlockLayoutRow id="boxQr_BlockLayoutRow">
+                <l:BlockLayoutCell
+                    id="boxQr_BlockLahyoutCell"
+                    width="90%"
+                >
+                    <HBox
+                        id="boxQr_selectionBox"
+                        class="sapUiSmallMarginTop"
+                    >
+                        <!-- First Selection -->
+                        <Label
+                            id="boxQrr_selectLabel"
+                            text="Select Batch Number"
+                            class="sapUiSmallMarginBegin"
+                        />
+                        <Select
+                            id="boxQr_dealerSelect"
+                            forceSelection="false"
+                            change="onDealerChange"
+                            class="sapUiSmallMarginBegin"
+                        >
+                            <items>
+                                <core:Item
+                                    id="boxQr_coreItmes1"
+                                    text="Batch001"
+                                />
+                                <core:Item
+                                    id="boxQr_coreItmes2"
+                                    text="Batch002"
+                                />
+                                <core:Item
+                                    id="boxQr_coreItmes3"
+                                    text="Batch003"
+                                />
+                            </items>
+                        </Select>
+                    </HBox>
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+    </l:VerticalLayout>
+
+  
+        <form:SimpleForm
+            id="_IDGenSimpleForm1"
+            class="sapUiSmallMargin"
+            editable="true"
+            width="97%"
+            backgroundDesign="Solid"
+            
+        >
+            <form:content>
+                <core:Title id="_IDGenTitle1" />
+                <Label
+                    id="_IDGenLabel2"
+                    text="Material"
+                    design="Bold"
+                />
+                <HBox id="_IDGenHBox4">
+                    <Input
+                        id="companyCode"
+                        width="200px"
+                        editable="false"
+                        value="{}"
+                    />
+                </HBox>
+                <Label
+                    id="_IDGenLabel4"
+                    text="Material Code"
+                    design="Bold"
+                />
+                <HBox id="_IDGenHBox5">
+                    <Input
+                        id="companyCode_id"
+                        width="200px"
+                        editable="false"
+                        value="{}"
+                    />
+                </HBox>
+                <Label
+                    id="_IDGenLabel5"
+                    text="Cost"
+                    design="Bold"
+                />
+                <HBox id="_IDGenHBox6">
+                    <Input
+                        id="purchaseOrg_id"
+                        width="200px"
+                        editable="false"
+                        value="{}"
+                    />
+                </HBox>
+                <core:Title id="_IDGenTitle2" />
+
+                <Label
+                    id="_IDGenLabel7"
+                    text="Manufacturing Date"
+                    design="Bold"
+                />
+                <DatePicker
+                    id="DP1"
+                    placeholder=" "
+                    change="onInputChange"
+                    width="200px"
+                    required="false"
+                    ariaLabelledBy=""
+                    value="{headerModel>/ValidFrom}"
+                    editable="false"
+                    valueFormat="yyyy-MM-dd"
+                    displayFormat="yyyy-MM-dd"
+                />
+                <Label
+                    id="_IDGenLabel8"
+                    text="Expiry Date"
+                    design="Bold"
+                />
+                <DatePicker
+                    id="DP2"
+                    placeholder=" "
+                    change="onInputChange"
+                    width="200px"
+                    required="false"
+                    editable="false"
+                    ariaLabelledBy=""
+                    value="{headerModel>/ValidTo}"
+                    valueFormat="yyyy-MM-dd"
+                    displayFormat="yyyy-MM-dd"
+                />
+                <Label
+                    id="_IDGenLabel3"
+                    text="Quantity"
+                    design="Bold"
+                />
+                <HBox id="_IDGenHBox7">
+                    <Input
+                        id="companyCod"
+                        width="200px"
+                        editable="false"
+                        value="{headerModel>/PurchGrpText}"
+                    />
+                </HBox>
+            </form:content>
+        </form:SimpleForm>
+    
+</mvc:View>

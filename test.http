@@ -1,0 +1,27 @@
+POST /batchDetails HTTP/1.1
+Host: your-cap-service-host
+Content-Type: application/json
+
+{
+    "batchID": "123e4567-e89b-12d3-a456-426614174000",
+    "quantity": 100.50,
+    "manufacturingDate": "2024-01-01",
+    "expiryDate": "2025-01-01",
+    "productionID": "PROD001",
+    "material": "Material A",
+    "materialCode": "MAT001"
+}
+
+---
+
+POST /boxDetails HTTP/1.1
+Host: your-cap-service-host
+Content-Type: application/json
+
+{
+    "boxID": "223e4567-e89b-12d3-a456-426614174001",
+    "qrID": "QR1234567890",
+    "batch_batchID": "123e4567-e89b-12d3-a456-426614174000",
+    "manufacturingDate": "2024-01-01",
+    "expiryDate": "2025-01-01"
+}

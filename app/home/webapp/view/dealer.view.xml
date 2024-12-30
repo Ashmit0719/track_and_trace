@@ -1,0 +1,229 @@
+<mvc:View
+    controllerName="app.home.controller.dealer"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt"
+    xmlns:form="sap.ui.layout.form"
+>
+    <tnt:ToolHeader
+        id="dealer_mainToolheaded"
+        class="sapUiSmallMarginBegin sapUiSmallMarginEnd sapUiSmallMarginTop"
+    >
+        <ToolbarSpacer
+            id="dealer_mainToolbarSpacer"
+            width="15px"
+        />
+        <Title
+            id="dealer_Title_FieldDefinition"
+            text="Dealer"
+            wrapping="true"
+            level="H3"
+
+        />
+    </tnt:ToolHeader>
+    
+
+    <!-- Toolbar for Selection -->
+    <l:VerticalLayout
+        id="dealer_hVerticalLayout"
+        width="100%"
+    >
+        <l:BlockLayout
+            id="dealer_BlochkLayout"
+            background="Dashboard"
+        
+        >
+            <l:BlockLayoutRow id="dealer_BlockLayoutRow">
+                <l:BlockLayoutCell
+                    id="dealer_BlockLahyoutCell"
+                    width="90%"
+                >
+                    <HBox
+                        id="dealer_selectionBox"
+                        class="sapUiSmallMarginTop"
+                    >
+                        <!-- First Selection -->
+                        <Label
+                            id="dealer_selectLabel"
+                            text="Select Dealer"
+                            class="sapUiSmallMarginBegin"
+                        />
+                        <Select
+                            id="dealer_dealerSelect"
+                            forceSelection="false"
+                            change="onDealerChange"
+                            class="sapUiSmallMarginBegin"
+                        >
+                            <items>
+                                <core:Item
+                                    id="dealer_coreItmes1"
+                                    text="Dealer 1"
+                                />
+                                <core:Item
+                                    id="dealer_coreItmes2"
+                                    text="Dealer 2"
+                                />
+                                <core:Item
+                                    id="dealer_coreItmes3"
+                                    text="Dealer 3"
+                                />
+                            </items>
+                        </Select>
+
+                        <Label
+                            id="dealer_ocSelect"
+                            text="Select Outer Box"
+                            class="sapUiSmallMarginBegin"
+                        />
+                        <Select
+                            id="dealer_outerBoxSelect"
+                            forceSelection="false"
+                            change="onOuterBoxChange"
+                            class="sapUiSmallMarginBegin"
+                        >
+                            <items>
+                                <core:Item
+                                    id="dealer_boxCoreItmes"
+                                    text="Box 1"
+                                />
+                                <core:Item
+                                    id="dealer_boxCoreItmes2"
+                                    text="Box 2"
+                                />
+                                <core:Item
+                                    id="dealer_boxCoreItmes3"
+                                    text="Box 3"
+                                />
+                            </items>
+                        </Select>
+                    <!-- </HBox> -->
+                     <!-- Checkbox for IC and OC -->
+        <!-- <HBox id="dealer_checkboxContainer"> -->
+            <CheckBox
+                id="dealer_icCheckBox"
+                text="IC"
+                select="onCheckboxSelect"
+                class="sapUiLargeMarginBegin"
+            />
+            <CheckBox
+                id="dealer_ocCheckBox"
+                text="OC"
+                select="onCheckboxSelect"
+                class="sapUiSmallMarginBegin"
+            />
+        </HBox>
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+    </l:VerticalLayout>
+
+   
+                            <!-- Container for IC Fields -->
+                            <form:SimpleForm
+                            id="dealer_icFieldsContainer"
+                            class="sapUiSmallMargin"
+                            editable="true"
+                            width="97%"
+                            visible="false"
+                            >
+                                <form:content>
+                                    <core:Title id="dealer_formContent1" />
+
+                                    <!-- Quantity -->
+
+                                    <Label
+                                        id="dealer_quantityLabel"
+                                        text="Quantity "
+                                        visible="{/showQuantityBox}"
+                                    />
+
+                                    <HBox id="dealer_quantityHBox" visible="{/showQuantityBox}">
+                                        <Button
+                                            id="dealer_decreaseQuantityButton"
+                                            icon="sap-icon://less"
+                                            press=".onDecreaseQuantity"
+                                        />
+                                        <Input
+                                            id="dealer_quantityInput"
+                                            type="Number"
+                                            value="0"
+                                            editable="true"
+                                            textAlign="Center"
+                                            width="4rem"
+                                        />
+                                        <Button
+                                            id="dealer_increaseQuantityButton"
+                                            icon="sap-icon://add"
+                                            press=".onIncreaseQuantity"
+                                        />
+                                    </HBox>
+                                    <!-- Date Picker -->
+
+                                    <Label
+                                        id="dealer_selectdateLabel"
+                                        text="Select Date "
+                                    />
+                                    <HBox id="dealer_dateHBox">
+                                        <DatePicker
+                                            id="dealer_datePicker"
+                                            valueFormat="yyyy-MM-dd"
+                                            displayFormat="MMM dd, yyyy"
+                                        />
+                                    </HBox>
+                                    <!-- Retailer -->
+
+                                    <Label
+                                        id="dealer_retailerLabel"
+                                        text="Retailer "
+                                    />
+                                    <HBox id="dealer_retailerHBox">
+                                        <Input
+                                            id="dealer_retailerInput"
+                                            placeholder="Enter Retailer Name"
+                                        />
+                                    </HBox>
+
+                                    <core:Title id="dealer_coretitle2" />
+
+                                    <Label
+                                        id="dealer_salesOrderLabel"
+                                        text="Sales order Number"
+                                    />
+                                    <HBox id="dealer_salesOrderHBox">
+                                        <Input
+                                            id="dealer_salesOrderInput"
+                                            placeholder="Enter order No."
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="dealer_outbondDeliveryLabel"
+                                        text="Outbound delivery "
+                                    />
+                                    <HBox id="dealer_outBonnDeliveryHBox">
+                                        <Input
+                                            id="dealer_outbondDeliveryInput"
+                                            placeholder="Enter Outbound Delivery"
+                                        />
+                                    </HBox>
+                                </form:content>
+                            </form:SimpleForm>
+                    
+ <HBox id="buttonContainer" justifyContent="End" class="sapUiTinyMarginTop">
+                <Button
+                    id="dealer_CancelButton"
+                    text="Cancel"
+                    
+                />
+                <Button
+                    id="dealer_SaveButton"
+                    text="Save"
+                    type="Emphasized"
+                    class="sapUiSmallMarginBegin sapUiLargeMarginEnd"
+                />
+            </HBox>
+            <!-- </ScrollContainer> -->
+        <!-- </Page> -->
+</mvc:View>
