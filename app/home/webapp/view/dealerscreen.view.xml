@@ -35,11 +35,12 @@
                     headerText="Dealer"
                     height="100%"
                 >
-                <Label id="_IDGenLabel" 
-                text="SCAN BARCODE"
-                class="sapUiSmallMarginEnd "
-                design="Bold">
-                </Label>
+                    <Label
+                        id="_IDGenLabel"
+                        text="SCAN BARCODE"
+                        class="sapUiSmallMarginEnd "
+                        design="Bold"
+                    />
                     <!-- Barcode Scanner Button -->
                     <ndc:BarcodeScannerButton
                         id="sampleBarcodeScannerButton"
@@ -48,8 +49,31 @@
                         scanFail="onScanError"
                         inputLiveUpdate="onScanLiveupdate"
                         class="sapUiSmallMarginBottom"
-                        
                     />
+                    <!-- <VBox id="_IDGenVBox" >
+                    <Label id="_IDGenLabel9" 
+                    
+                    text="Start Date"
+                    
+                    
+                    />
+                    <DatePicker id="_IDGenDatePicker1" 
+                    
+                    class="sapUiSmallMarginBottom"
+                    />
+                    <Label id="_IDGenLabel15" 
+                    
+                    text="End Date"
+                    
+                    
+                    />
+                    <DatePicker id="_IDGenDatePicker2" 
+                    
+                    
+                    />
+                    
+                    </VBox>
+                     -->
 
                     <!-- <Input
                         id="stp_Input"
@@ -112,12 +136,13 @@
                                     />
                                     <DisplayListItem
                                         id="materialID"
-                                       label="Batch no: {scandatamodel>/batchId}"
+                                        label="Batch no: {scandatamodel>/batchId}"
                                     />
 
                                     <DisplayListItem
                                         id="materialID2"
-    label="Material: {scandatamodel>/rows/0/ProductCode}" />
+                                        label="Material: {scandatamodel>/rows/0/ProductCode}"
+                                    />
                                 </List>
                             </VBox>
                             <VBox id="_IDGenVBox2w">
@@ -129,7 +154,7 @@
 
                                     <DisplayListItem
                                         id="contractID1"
-                                         label="Inner Compartment Unit: {scandatamodel>/totalPackaging2}"
+                                        label="Inner Compartment Unit: {scandatamodel>/totalPackaging2}"
                                     />
                                     <DisplayListItem
                                         id="materialIDe2"
@@ -163,15 +188,14 @@
                         </headerToolbar>
 
                         <columns>
-
-                         <Column
+                            <Column
                                 id="_IDGenColum3"
                                 width="70px"
                                 hAlign="Center"
                             >
                                 <Label
                                     id="_IDGenLabe6"
-                                    text="Serial No."
+                                    text="OC ID"
                                 />
                             </Column>
                             <Column
@@ -181,7 +205,7 @@
                             >
                                 <Label
                                     id="_IDGenLabel0"
-                                    text="Boxes"
+                                    text="IC ID"
                                 />
                             </Column>
                             <Column
@@ -191,6 +215,16 @@
                             >
                                 <Label
                                     id="_IDGenLabedl2"
+                                    text="Packaging"
+                                />
+                            </Column>
+                            <Column
+                                id="_IDGenColum"
+                                width="70px"
+                                hAlign="Center"
+                            >
+                                <Label
+                                    id="_IDGenLabdel4"
                                     text="Product Code"
                                 />
                             </Column>
@@ -201,7 +235,7 @@
                             >
                                 <Label
                                     id="_IDGenLabdel3"
-                                    text="IC Code"
+                                    text="Expiry Date"
                                 />
                             </Column>
                             <Column
@@ -214,17 +248,8 @@
                                     text="Manufacturing Date"
                                 />
                             </Column>
-                            <Column
-                                id="_IDGenColum"
-                                width="70px"
-                                hAlign="Center"
-                            >
-                                <Label
-                                    id="_IDGenLabdel4"
-                                    text="Expiry Date"
-                                />
-                            </Column>
-                           
+                            
+
                             <!-- <Column
                                     id="_IDGenColum31"
                                     width="70px"
@@ -257,7 +282,7 @@
                             press="onMaterialRowSelect"
                         >
                             <cells>
-                            <Text
+                                <Text
                                     id="_IDGenText2w5"
                                     class="inputItem"
                                     text="{scandatamodel>SeqNo}"
@@ -292,7 +317,7 @@
                                     class="inputItem"
                                     text="{scandatamodel>productionCode}"
                                 /> -->
-                                
+
                                 <Link
                                     id="_IDGenText23"
                                     class="inputItem"
@@ -304,13 +329,13 @@
                         </ColumnListItem>
                     </Table>
 
-                    <Button
+                    <!-- <Button
                         id="_IDGenButton1"
                         text="Submit"
                         class="sapUiSmallMargin"
                         type="Emphasized"
                         press="createNomination"
-                    />
+                    /> -->
                 </Panel>
             </l:SplitPane>
         </l:PaneContainer>
