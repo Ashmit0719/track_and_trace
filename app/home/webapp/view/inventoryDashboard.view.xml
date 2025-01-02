@@ -86,39 +86,43 @@
             items="{filteredMaterialModel>/materials}">
             <columns>
                 <Column id="_IDGenColumn1" width="70px" hAlign="Center">
-                    <Label id="_IDGenLabel1" text="Packaging" />
+                    <Label id="_IDGenLabel1" text="OC" />
                 </Column>
                 <Column id="_IDGenColumn2" width="70px" hAlign="Center">
-                    <Label id="_IDGenLabel6" text="Product Code" />
+                    <Label id="_IDGenLabel6" text="IC" />
                 </Column>
                 <Column id="_IDGenColumn4" width="70px" hAlign="Center">
-                    <Label id="_IDGenLabel10" text="Manufacturing Date" />
+                    <Label id="_IDGenLabel10" text="Packaging" />
                 </Column>
                 <Column id="_IDGenColumn5" width="70px" hAlign="Center">
-                    <Label id="_IDGenLabel11" text="Expiry Date" />
+                    <Label id="_IDGenLabel11" text="Product Code" />
                 </Column>
                 <Column id="_IDGenColumn6" width="70px" hAlign="Center">
                     <Label id="_IDGenLabel12" text="Production ID" />
                 </Column>
                 <Column id="_IDGenColumn7" width="70px" hAlign="Center" mergeDuplicates="true">
-                    <Label id="_IDGenLabel13" text="IC Code" />
+                    <Label id="_IDGenLabel13" text="Manufacturing Date" />
                 </Column>
                 <Column id="_IDGenColumn72" width="70px" hAlign="Center" mergeDuplicates="true">
-                    <Label id="_IDGenLabel132" text="OC Code" />
+                    <Label id="_IDGenLabel132" text="Expiry Date" />
                 </Column>
                 <Column id="_IDGenColumn8" width="70px" hAlign="Center" mergeDuplicates="true">
-                    <Label id="_IDGenLabel14" text="QR Code" />
+                    <Label id="_IDGenLabel14" text="Status" />
+                </Column>
+                <Column id="_IDGenColumn8e" width="70px" hAlign="Center" mergeDuplicates="true">
+                    <Label id="_IDGenLabel1e4" text="QR Code" />
                 </Column>
             </columns>
             <ColumnListItem id="_IDGenColumnListItem" press="onMaterialRowSelect">
                 <cells>
                     <Text id="_IDGenText" text="{filteredMaterialModel>packaging}" />
-                    <Text id="_IDGenText1" text="{filteredMaterialModel>productCode}" />
-                    <Text id="_IDGenText3" text="{filteredMaterialModel>manufacturingDate}" />
-                    <Text id="_IDGenText4" text="{filteredMaterialModel>expiryDate}" />
+                    <Text id="_IDGenText1" text="{filteredMaterialModel>ICCode}" />
+                    <Text id="_IDGenText3" text="{filteredMaterialModel>packaging}" />
+                    <Text id="_IDGenText4" text="{filteredMaterialModel>productCode}" />
                     <Text id="_IDGenText5" text="{filteredMaterialModel>productionCode}" />
-                    <Text id="_IDGenText6" text="{filteredMaterialModel>ICCode}" />
-                    <Text id="_IDGenText36" text="{filteredMaterialModel>ICCode}" />
+                    <Text id="_IDGenText6" text="{filteredMaterialModel>manufacturingDate}" />
+                    <Text id="_IDGenText36" text="{filteredMaterialModel>expiryDate}" />
+                    <Text id="_IDGenText36e" text="{filteredMaterialModel>ICCode}" />
                     <Link id="_IDGenLink"
                         text="{= ${filteredMaterialModel>ICCode} ? ${filteredMaterialModel>ICCode}.slice(-4) + ' View QR' : '' }"
                         press="onViewQRPress"

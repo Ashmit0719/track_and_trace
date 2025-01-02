@@ -25,6 +25,10 @@ sap.ui.define([
         onclickDashboard: function () {
             var oDashboard = sap.ui.core.UIComponent.getRouterFor(this);
             oDashboard.navTo("RouteinventoryDashboard");
+        },
+        onPressCreateOrderTile:function(){
+            var createProduct = sap.ui.core.UIComponent.getRouterFor(this);
+            createProduct.navTo("RoutecreateProduct");
         }
     });
 });

@@ -124,6 +124,13 @@
           "target": [
             "TargetinventoryDashboard"
           ]
+        },
+        {
+          "name": "RoutecreateProduct",
+          "pattern": ":createProduct",
+          "target": [
+            "TargetcreateProduct"
+          ]
         }
       ],
       "targets": {
@@ -146,6 +153,9 @@
         "TargetinventoryDashboard": {
           "id": "inventoryDashboard",
           "name": "inventoryDashboard"
+        },"TargetcreateProduct": {
+          "id": "createProduct",
+          "name": "createProduct"
         }
       }
     },

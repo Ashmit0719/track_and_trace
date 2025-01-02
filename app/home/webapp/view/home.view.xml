@@ -67,6 +67,19 @@
                     />
                 </TileContent>
             </GenericTile>
+             <GenericTile
+                id="_IDGenGenericTile3"
+                class="sapUiSmallMarginBegin sapUiSmallMarginTop tileLayout"
+                header="Create Order"
+                press="onPressCreateOrderTile"
+            >
+                <TileContent id="_IDGenTileContent3">
+                    <ImageContent
+                        id="_IDGenImageContent3"
+                        src="sap-icon://decision"
+                    />
+                </TileContent>
+            </GenericTile>
         </content>
     </Page>
 </mvc:View>
