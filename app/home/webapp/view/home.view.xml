@@ -69,7 +69,7 @@
             </GenericTile>
              <GenericTile
                 id="_IDGenGenericTile3"
-                class="sapUiSmallMarginBegin sapUiSmallMarginTop tileLayout"
+                class="sapUiMediumMargin"
                 header="Create Order"
                 press="onPressCreateOrderTile"
             >

@@ -23,3 +23,34 @@ entity BoxDetails {
 
     // Add a virtual/computed validation logic in service or handler if necessary
 }
+
+
+
+entity productionOrder{
+
+    key batchID:Integer;
+        materialName:String;
+        materialID:Integer;
+        productionPlant:String;
+        productionID:Integer;
+        productionQuantity:Integer;
+        startDate:Date;
+        endDate:Date;
+        manufacturingDate:Date;
+        expiryDate:Date;
+        deliveryQuantity:Integer;
+        orderType:String;
+        priority:String;
+        workCenter:String;
+        Remark:String;
+        status:String;
+        
+}
+
+entity material{
+    key materialId:Integer;
+    materialName:String;
+    productionPlant:String;
+    orderType:String;
+    workCenter:String;
+}
