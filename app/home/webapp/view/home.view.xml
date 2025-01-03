@@ -15,6 +15,7 @@
                 header="Dealer"
                 subheader="Create Sales Order"
                 press="onDealerClick"
+                visible="false"
             >
                 <TileContent id="_IDGenTileContent1">
                     <ImageContent
@@ -29,6 +30,7 @@
                 header="Batch Number"
                 subheader="Qr genration for Boxes"
                 press="onBatchClick"
+                visible="false"
             >
                 <TileContent id="_IDGenTileContent2">
                     <ImageContent
@@ -59,6 +61,7 @@
                 header="Inventory Dashboard"
                 subheader="Dashboard Screen"
                 press="onclickDashboard"
+                
             >
                 <TileContent id="_IDGenTileContent22d">
                     <ImageContent
