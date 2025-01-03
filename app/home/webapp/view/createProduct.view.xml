@@ -140,19 +140,7 @@
                                     />
                                 </HBox>
 
-                                <Label
-                                    id="_IDLabel6"
-                                    text="Delivery Quantity"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDHBox3">
-                                    <Input
-                                        id="distChan_id"
-                                        width="200px"
-                                        type="Number"
-                                    />
-                                </HBox>
+                                
                                 <Label
                                     id="workCenterLabel"
                                     text="Work Center"
@@ -167,6 +155,7 @@
                                         valueHelpRequest="onWorkCenterValueHelp"
                                         width="200px"
                                         class="workCenterInput"
+                                        editable="false"
                                     />
                                 </HBox>
 
@@ -218,6 +207,7 @@
                                         required="true"
                                     />
                                 </HBox>
+                                
                             </form:content>
 
                             </form:SimpleForm>
@@ -235,6 +225,25 @@
                             class="tableBorder sapUiTinyMargin"
                             editable="true"
                         >
+                        <form:content>
+                        <core:Title id="_IDGenTitle2e1" />
+                        
+                        <Label
+                                    id="_IDLabel6"
+                                    text="Delivery Quantity"
+                                    design="Bold"
+                                    class="sapUiTinyMarginTop"
+                                />
+                                <HBox id="_IDHBox3">
+                                    <Input
+                                        id="distChan_id"
+                                        width="200px"
+                                        type="Number"
+                                    />
+                                </HBox>
+                        
+                        
+                        </form:content>
                         </form:SimpleForm>
                         </IconTabFilter>
                     </items>
