@@ -207,25 +207,98 @@
                                         required="true"
                                     />
                                 </HBox>
-                                
+                               
                             </form:content>
-
+                                
                             </form:SimpleForm>
+                            <HBox id="_IDGenHBox" justifyContent="End" >
+                                <Button id="eeee"
+                                text="Submit"
+                                type="Emphasized"
+                        press="onClickSumbitButton"></Button>
+                                </HBox>
                         </IconTabFilter>
 
-                         <IconTabFilter
-                        id="_IDGenIconTabFilter2"
+                      <IconTabFilter
+    id="_IDGenIconTabFilter2"
+    key="itemDetails"
+    text="Good Issue"
+    icon="sap-icon://activity-items"
+    enabled="true"
+>
+    <form:SimpleForm
+        id="_IDGenSimpleForm2"
+        class="tableBorder sapUiTinyMargin"
+        editable="true"
+    >
+        <form:content>
+            <core:Title id="headerTitle" />
+            
+            <!-- Heading Section -->
+            <VBox id="_IDGenVBox">
+            <HBox id="_IDGenHBox1" >
+                <Label
+                    id="_IDLabele6"
+                    text="Production No"
+                    design="Bold"
+                />
+                
+                <Select
+                    id="distChan_ifd"
+                    width="200px"
+                    class="sapUiSmallMarginBegin"
+                />
+                </HBox>
+            </VBox>
+
+            <!-- Additional Fields -->
+            <Label
+                id="_IDLabel6e"
+                text="Production No"
+                design="Bold"
+                class="sapUiMediumMarginTop"
+            />
+            <HBox id="_IDHBoxe3">
+            <Input 
+            id="asss"
+            width="200px"
+            class="sapUiMediumMarginTop"
+            
+            
+            />
+               
+            </HBox>
+
+            <Label
+                id="f"
+                text="Delivery Quantity"
+                design="Bold"
+                class="sapUiTinyMarginTop"
+            />
+            <HBox id="e">
+                <Input
+                    id="distChfan_id"
+                    width="200px"
+                    type="Number"
+                />
+            </HBox>
+        </form:content>
+    </form:SimpleForm>
+</IconTabFilter>
+
+                        <IconTabFilter
+                        id="_IDGenIconTabFilter2w"
                         key="itemDetails"
                         text="Confirmation"
-                        icon="sap-icon://activity-items"
+                        icon="sap-icon://bbyd-active-sales"
                         enabled="true"
                     >
                         <form:SimpleForm
-                            id="_IDGenSimpleForm2"
+                            id="_IDGenSimpleForm2w"
                             class="tableBorder sapUiTinyMargin"
                             editable="true"
                         >
-                        <form:content>
+                         <form:content>
                         <core:Title id="_IDGenTitle2e1" />
                         
                         <Label
@@ -237,6 +310,38 @@
                                 <HBox id="_IDHBox3">
                                     <Input
                                         id="distChan_id"
+                                        width="200px"
+                                        type="Number"
+                                    />
+                                </HBox>
+                        
+                        
+                        </form:content>
+                        </form:SimpleForm>
+                        </IconTabFilter><IconTabFilter
+                        id="_IDGenIconTabFilterf2"
+                        key="itemDetails"
+                        text="Good Receipt"
+                        icon="sap-icon://receipt"
+                        enabled="true"
+                    >
+                        <form:SimpleForm
+                            id="_IDGenSimpleFormf2"
+                            class="tableBorder sapUiTinyMargin"
+                            editable="true"
+                        >
+                        <form:content>
+                        <core:Title id="_IDGenTitlwe2e1" />
+                        
+                        <Label
+                                    id="_IDLabel6w"
+                                    text="Delivery Quantity"
+                                    design="Bold"
+                                    class="sapUiTinyMarginTop"
+                                />
+                                <HBox id="_IDHBox3d">
+                                    <Input
+                                        id="distChafn_id"
                                         width="200px"
                                         type="Number"
                                     />

@@ -26,6 +26,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: Trace_and_Trace-db
+      - name: Trace_and_Trace-destination
 
   - name: Trace_and_Trace-db-deployer
     type: hdb
@@ -41,3 +42,8 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: Trace_and_Trace-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
