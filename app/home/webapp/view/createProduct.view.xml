@@ -29,7 +29,10 @@
         />
     </tnt:ToolHeader>
 
-    <l:VerticalLayout id="_IDGenVerticalLayout" width="100%">
+    <l:VerticalLayout
+        id="_IDGenVerticalLayout"
+        width="100%"
+    >
         <f:DynamicPage
             id="dynamicPage"
             showFooter="true"
@@ -46,310 +49,529 @@
                             text="Production Details"
                             icon="sap-icon://header"
                         >
-                            <form:SimpleForm id="_IDGenSimpleForm"
+                            <form:SimpleForm
+                                id="_IDGenSimpleForm"
                                 editable="true"
                                 class="sapUiTinyMargin"
                             >
-                                 <form:content>
-                                <core:Title id="_IDGenTitle21" />
-                                <Label
-                                    id="_IDLabel2"
-                                    text="Material"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                    required="true"
-                                />
-                                <HBox id="SoldTPBox">
-                                    <Input
-                                        id="materialInput"
-                                        width="200px"
-                                        showValueHelp="true"
-                                        valueHelpRequest="onMaterialValuehelpClick"
+                                <form:content>
+                                    <core:Title id="_IDGenTitle21" />
+                                    <Label
+                                        id="_IDLabel2"
+                                        text="Material"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                </HBox>
-                                <Label
-                                    id="_IDLabel4"
-                                    text="Production Plant"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                    required="true"
-                                />
-                                <HBox id="_IDHBox2">
-                                    <Input
-                                        id="productionplantinput"
-                                        showValueHelp="true"
-                                        valueHelpRequest="onProductionPlantValueHelp"
-                                        width="200px"
-                                        class="salesOrgDesc"
-                                    />
-                                </HBox>
-                                <Label
-                                    id="_IDGenLabe2l7"
-                                    text="Start Date"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <DatePicker
-                                    id="DP21"
-                                    change="onSelectDate"
-                                    width="200px"
-                                    ariaLabelledBy=""
-                                />
-                                <Label
-                                    id="_IDGenLabel28"
-                                    text="End Date"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <DatePicker
-                                    id="DP22"
-                                    change="onSelectDate"
-                                    width="200px"
-                                />
-
-                                <Label
-                                    id="_IDLabel5"
-                                    text="Production Quantity"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDGenHBox42">
-                                    <Input
-                                        id="division_id"
-                                        width="200px"
-                                        type="Number"
-                                    />
-                                </HBox>
-
-                                <core:Title id="_IenTitle2" />
-                                <Label
-                                    id="orderTypeLabel"
-                                    text="Order Type"
-                                    design="Bold"
-                                    required="true"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="orderTypeHBox">
-                                    <Input
-                                        id="orderTypeInput"
-                                        width="200px"
-                                        showValueHelp="true"
-                                        valueHelpRequest="onOrderTypeValueHelp"
+                                    <HBox id="SoldTPBox">
+                                        <Input
+                                            id="materialInput"
+                                            width="200px"
+                                            showValueHelp="true"
+                                            valueHelpRequest="onMaterialValuehelpClick"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDLabel4"
+                                        text="Production Plant"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                </HBox>
-
-                                
-                                <Label
-                                    id="workCenterLabel"
-                                    text="Work Center"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                    required="true"
-                                />
-                                <HBox id="workCenterHBox">
-                                    <Input
-                                        id="workCenterInput"
-                                        showValueHelp="true"
-                                        valueHelpRequest="onWorkCenterValueHelp"
-                                        width="200px"
-                                        class="workCenterInput"
-                                        editable="false"
+                                    <HBox id="_IDHBox2">
+                                        <Input
+                                            id="productionplantinput"
+                                            showValueHelp="true"
+                                            valueHelpRequest="onProductionPlantValueHelp"
+                                            width="200px"
+                                            class="salesOrgDesc"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabe2l7"
+                                        text="Start Date"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                     />
-                                </HBox>
-
-                                <Label
-                                    id="_IDLabel16"
-                                    text="Priority"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDGenHBox15">
-                                    <Select
-                                        id="division_id17"
+                                    <DatePicker
+                                        id="DP21"
+                                        change="onSelectDate"
                                         width="200px"
-                                        selectedKey=""
-                                    >
-                                        <core:Item
-                                            id="_IDGenItem1"
-                                            key=""
-                                            text="--Select--"
-                                        />
-                                        <core:Item
-                                            id="_IDGenItem2"
-                                            key="high"
-                                            text="High"
-                                        />
-                                        <core:Item
-                                            id="_IDGenItem3"
-                                            key="medium"
-                                            text="Medium"
-                                        />
-                                        <core:Item
-                                            id="_IDGenItem4"
-                                            key="low"
-                                            text="Low"
-                                        />
-                                    </Select>
-                                </HBox>
-
-                                <Label
-                                    id="_IDnLabel7"
-                                    text="Remarks"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDGenHBox18">
-                                    <Input
-                                        id="ShipTP_id19"
+                                        ariaLabelledBy=""
+                                    />
+                                    <Label
+                                        id="_IDGenLabel28"
+                                        text="End Date"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <DatePicker
+                                        id="DP22"
+                                        change="onSelectDate"
                                         width="200px"
+                                    />
+
+                                    <Label
+                                        id="_IDLabel5"
+                                        text="Production Quantity"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox42">
+                                        <Input
+                                            id="division_id"
+                                            width="200px"
+                                            type="Number"
+                                        />
+                                    </HBox>
+
+                                    <core:Title id="_IenTitle2" />
+                                    <Label
+                                        id="orderTypeLabel"
+                                        text="Order Type"
+                                        design="Bold"
+                                        required="true"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="orderTypeHBox">
+                                        <Input
+                                            id="orderTypeInput"
+                                            width="200px"
+                                            showValueHelp="true"
+                                            valueHelpRequest="onOrderTypeValueHelp"
+                                            required="true"
+                                        />
+                                    </HBox>
+
+                                    <Label
+                                        id="workCenterLabel"
+                                        text="Work Center"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                </HBox>
-                               
-                            </form:content>
-                                
+                                    <HBox id="workCenterHBox">
+                                        <Input
+                                            id="workCenterInput"
+                                            showValueHelp="true"
+                                            valueHelpRequest="onWorkCenterValueHelp"
+                                            width="200px"
+                                            class="workCenterInput"
+                                            editable="false"
+                                        />
+                                    </HBox>
+
+                                    <Label
+                                        id="_IDLabel16"
+                                        text="Priority"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox15">
+                                        <Select
+                                            id="division_id17"
+                                            width="200px"
+                                            selectedKey=""
+                                        >
+                                            <core:Item
+                                                id="_IDGenItem1"
+                                                key=""
+                                                text="--Select--"
+                                            />
+                                            <core:Item
+                                                id="_IDGenItem2"
+                                                key="high"
+                                                text="High"
+                                            />
+                                            <core:Item
+                                                id="_IDGenItem3"
+                                                key="medium"
+                                                text="Medium"
+                                            />
+                                            <core:Item
+                                                id="_IDGenItem4"
+                                                key="low"
+                                                text="Low"
+                                            />
+                                        </Select>
+                                    </HBox>
+
+                                    <Label
+                                        id="_IDnLabel7"
+                                        text="Remarks"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox18">
+                                        <Input
+                                            id="ShipTP_id19"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                </form:content>
                             </form:SimpleForm>
-                            <HBox id="_IDGenHBox" justifyContent="End" >
-                                <Button id="eeee"
-                                text="Submit"
-                                type="Emphasized"
-                        press="onClickSumbitButton"></Button>
-                                </HBox>
+                            <HBox
+                                id="_IDGenHBox"
+                                justifyContent="End"
+                            >
+                                <Button
+                                    id="eeee"
+                                    text="Submit"
+                                    type="Emphasized"
+                                    press="onClickSumbitButton"
+                                />
+                            </HBox>
                         </IconTabFilter>
 
-                      <IconTabFilter
-    id="_IDGenIconTabFilter2"
-    key="itemDetails"
-    text="Good Issue"
-    icon="sap-icon://activity-items"
-    enabled="true"
->
-    <form:SimpleForm
-        id="_IDGenSimpleForm2"
-        class="tableBorder sapUiTinyMargin"
-        editable="true"
-    >
-        <form:content>
-            <core:Title id="headerTitle" />
-            
-            <!-- Heading Section -->
-            <VBox id="_IDGenVBox">
-            <HBox id="_IDGenHBox1" >
-                <Label
-                    id="_IDLabele6"
-                    text="Production No"
-                    design="Bold"
-                />
-                
-                <Select
-                    id="distChan_ifd"
-                    width="200px"
-                    class="sapUiSmallMarginBegin"
-                />
-                </HBox>
-            </VBox>
+                        <IconTabFilter
+                            id="_IDGenIconTabFilter2"
+                            key="itemDetails"
+                            text="Good Issue"
+                            icon="sap-icon://activity-items"
+                            enabled="true"
+                        >
+                            <form:SimpleForm
+                                id="_IDGenSimpleForm2"
+                                class="tableBorder sapUiTinyMargin"
+                                editable="true"
+                            >
+                                <form:content>
+                                    <!-- <core:Title id="_IDGenTitle2wee1" />
+                                    <Label
+                                        id="_IDGenLabel9"
+                                        text="Items"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox2">
+                                        <Input
+                                            id="_IDGenInput"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel15"
+                                        text="Components"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox3">
+                                        <Input
+                                            id="_IDGenInput1"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel16"
+                                        text="Description"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox8">
+                                        <Input
+                                            id="_IDGenInput2"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel17"
+                                        text="Request Quantity"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox9">
+                                        <Input
+                                            id="_IDGenInput3"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel18"
+                                        text="UOM"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox10">
+                                        <Input
+                                            id="_IDGenInput4"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <core:Title id="titlw" />
+                                    <Label
+                                        id="_IDGenLabel19"
+                                        text="Item Capacity"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox11">
+                                        <Input
+                                            id="_IDGenInput5"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel20"
+                                        text="Plant"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox12">
+                                        <Input
+                                            id="_IDGenInput6"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel21"
+                                        text="Batch"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox13">
+                                        <Input
+                                            id="_IDGenInput7"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox>
+                                    <Label
+                                        id="_IDGenLabel22"
+                                        text="Storage Location"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
+                                    />
+                                    <HBox id="_IDGenHBox14">
+                                        <Input
+                                            id="_IDGenInput8"
+                                            width="200px"
+                                            required="true"
+                                        />
+                                    </HBox> -->
 
-            <!-- Additional Fields -->
-            <Label
-                id="_IDLabel6e"
-                text="Production No"
-                design="Bold"
-                class="sapUiMediumMarginTop"
-            />
-            <HBox id="_IDHBoxe3">
-            <Input 
-            id="asss"
-            width="200px"
-            class="sapUiMediumMarginTop"
-            
-            
-            />
-               
-            </HBox>
-
-            <Label
-                id="f"
-                text="Delivery Quantity"
-                design="Bold"
-                class="sapUiTinyMarginTop"
-            />
-            <HBox id="e">
-                <Input
-                    id="distChfan_id"
-                    width="200px"
-                    type="Number"
-                />
-            </HBox>
-        </form:content>
-    </form:SimpleForm>
-</IconTabFilter>
+                                    <Table
+                                        id="createTypeTableew"
+                                        width="auto"
+                                        contextualWidth="Auto"
+                                        class="borderedTable"
+                                        sticky="ColumnHeaders"
+                                        noDataText="Loading ..."
+                                        selectionChange="onSelectionChange"
+                                    >
+                                        <columns>
+                                            <Column
+                                                id="_IDGenColumn1ee"
+                                                width="70px"
+                                                hAlign="Center"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele1"
+                                                    text="Items"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumne2"
+                                                width="70px"
+                                                hAlign="Center"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabel6e"
+                                                    text="Components"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumn4e"
+                                                width="70px"
+                                                hAlign="Center"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele10"
+                                                    text="Description"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumne5"
+                                                width="70px"
+                                                hAlign="Center"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabeel11"
+                                                    text="Request Quantity"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumn6e"
+                                                width="70px"
+                                                hAlign="Center"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele12"
+                                                    text="UOM"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumn7e"
+                                                width="70px"
+                                                hAlign="Center"
+                                                mergeDuplicates="true"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele13"
+                                                    text="Item Capacity"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumn72e"
+                                                width="70px"
+                                                hAlign="Center"
+                                                mergeDuplicates="true"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele132"
+                                                    text="Plant"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumhn8e"
+                                                width="70px"
+                                                hAlign="Center"
+                                                mergeDuplicates="true"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabele14"
+                                                    text="Storage Location"
+                                                />
+                                            </Column>
+                                            <Column
+                                                id="_IDGenColumn8ee"
+                                                width="70px"
+                                                hAlign="Center"
+                                                mergeDuplicates="true"
+                                            >
+                                                <Label
+                                                    id="_IDGenLabel1ee4"
+                                                    text="Batch"
+                                                />
+                                            </Column>
+                                        </columns>
+                                        <ColumnListItem
+                                            id="_IDGenColumneListItem"
+                                            press="onMaterialRowSelect"
+                                        >
+                                            <cells>
+                                                <Input
+                                                    id="_IDGenTexte"
+                                                    value="Items"
+                                                />
+                                                <Input
+                                                    id="_IDGenText1e"
+                                                    value="Components"
+                                                />
+                                                <Input
+                                                    id="_IDGenText3e"
+                                                    value="Description"
+                                                />
+                                                <Input
+                                                    id="_IDGenText4e"
+                                                    value="Request Quantity"
+                                                />
+                                                <Input
+                                                    id="_IDGenText5e"
+                                                    value="UOM"
+                                                />
+                                                <Input
+                                                    id="_IDGenText6e"
+                                                    value="Item Capacity"
+                                                />
+                                                <Input
+                                                    id="_IDGenTexte36"
+                                                    value="Plant"
+                                                />
+                                                <Input
+                                                    id="_IDGenText3e6e"
+                                                    value="Batch"
+                                                />
+                                                <Input
+                                                    id="iiww"
+                                                    value="Storage Location"
+                                                />
+                                            </cells>
+                                        </ColumnListItem>
+                                    </Table>
+                                </form:content>
+                            </form:SimpleForm>
+                        </IconTabFilter>
 
                         <IconTabFilter
-                        id="_IDGenIconTabFilter2w"
-                        key="itemDetails"
-                        text="Confirmation"
-                        icon="sap-icon://bbyd-active-sales"
-                        enabled="true"
-                    >
-                        <form:SimpleForm
-                            id="_IDGenSimpleForm2w"
-                            class="tableBorder sapUiTinyMargin"
-                            editable="true"
+                            id="_IDGenIconTabFilter2w"
+                            key="itemDetails"
+                            text="Confirmation"
+                            icon="sap-icon://bbyd-active-sales"
+                            enabled="true"
                         >
-                         <form:content>
-                        <core:Title id="_IDGenTitle2e1" />
-                        
-                        <Label
-                                    id="_IDLabel6"
-                                    text="Delivery Quantity"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDHBox3">
-                                    <Input
-                                        id="distChan_id"
-                                        width="200px"
-                                        type="Number"
+                            <form:SimpleForm
+                                id="_IDGenSimpleForm2w"
+                                class="tableBorder sapUiTinyMargin"
+                                editable="true"
+                            >
+                                <form:content>
+                                    <core:Title id="_IDGenTitle2e1" />
+
+                                    <Label
+                                        id="_IDLabel6"
+                                        text="Delivery Quantity"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                     />
-                                </HBox>
-                        
-                        
-                        </form:content>
-                        </form:SimpleForm>
-                        </IconTabFilter><IconTabFilter
-                        id="_IDGenIconTabFilterf2"
-                        key="itemDetails"
-                        text="Good Receipt"
-                        icon="sap-icon://receipt"
-                        enabled="true"
-                    >
-                        <form:SimpleForm
-                            id="_IDGenSimpleFormf2"
-                            class="tableBorder sapUiTinyMargin"
-                            editable="true"
+                                    <HBox id="_IDHBox3">
+                                        <Input
+                                            id="distChan_id"
+                                            width="200px"
+                                            type="Number"
+                                        />
+                                    </HBox>
+                                </form:content>
+                            </form:SimpleForm>
+                        </IconTabFilter>
+                        <IconTabFilter
+                            id="_IDGenIconTabFilterf2"
+                            key="itemDetails"
+                            text="Good Receipt"
+                            icon="sap-icon://receipt"
+                            enabled="true"
                         >
-                        <form:content>
-                        <core:Title id="_IDGenTitlwe2e1" />
-                        
-                        <Label
-                                    id="_IDLabel6w"
-                                    text="Delivery Quantity"
-                                    design="Bold"
-                                    class="sapUiTinyMarginTop"
-                                />
-                                <HBox id="_IDHBox3d">
-                                    <Input
-                                        id="distChafn_id"
-                                        width="200px"
-                                        type="Number"
+                            <form:SimpleForm
+                                id="_IDGenSimpleFormf2"
+                                class="tableBorder sapUiTinyMargin"
+                                editable="true"
+                            >
+                                <form:content>
+                                    <core:Title id="_IDGenTitlwe2e1" />
+
+                                    <Label
+                                        id="_IDLabel6w"
+                                        text="Delivery Quantity"
+                                        design="Bold"
+                                        class="sapUiTinyMarginTop"
                                     />
-                                </HBox>
-                        
-                        
-                        </form:content>
-                        </form:SimpleForm>
+                                    <HBox id="_IDHBox3d">
+                                        <Input
+                                            id="distChafn_id"
+                                            width="200px"
+                                            type="Number"
+                                        />
+                                    </HBox>
+                                </form:content>
+                            </form:SimpleForm>
                         </IconTabFilter>
                     </items>
                 </IconTabBar>
