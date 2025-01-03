@@ -11,18 +11,18 @@
     busyIndicatorDelay="0"
 >
     <tnt:ToolHeader
-        id="toolHeader"
+        id="toolHeader_createProduct"
         class="sapUiTinyMargin"
     >
         <Title
-            id="title"
+            id="title_createProduct"
             textAlign="Center"
             text="Production Order Details"
             wrapping="false"
         />
-        <ToolbarSpacer id="_IDGenToolbarSpacer" />
+        <ToolbarSpacer id="toolbarSpacer_createProduct" />
         <Avatar
-            id="avatar"
+            id="avatar_createProduct"
             src="sap-icon://employee"
             displaySize="XS"
             tooltip="Profile"
@@ -30,42 +30,42 @@
     </tnt:ToolHeader>
 
     <l:VerticalLayout
-        id="_IDGenVerticalLayout"
+        id="verticalLayout_createProduct"
         width="100%"
     >
         <f:DynamicPage
-            id="dynamicPage"
+            id="dynamicPage_createProduct"
             showFooter="true"
             preserveHeaderStateOnScroll="true"
         >
             <f:content>
                 <IconTabBar
-                    id="iconTabBar"
+                    id="iconTabBar_createProduct"
                     class="sapUiResponsiveContentPadding"
                 >
                     <items>
                         <IconTabFilter
-                            id="tabFilter"
+                            id="tabFilter_createProduct"
                             text="Production Details"
                             icon="sap-icon://header"
                         >
                             <form:SimpleForm
-                                id="_IDGenSimpleForm"
+                                id="simpleForm_createProduct"
                                 editable="true"
                                 class="sapUiTinyMargin"
                             >
                                 <form:content>
-                                    <core:Title id="_IDGenTitle21" />
+                                    <core:Title id="title_createProduct1" />
                                     <Label
-                                        id="_IDLabel2"
+                                        id="label_material_createProduct"
                                         text="Material"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                    <HBox id="SoldTPBox">
+                                    <HBox id="soldTPBox_createProduct">
                                         <Input
-                                            id="materialInput"
+                                            id="materialInput_createProduct"
                                             width="200px"
                                             showValueHelp="true"
                                             valueHelpRequest="onMaterialValuehelpClick"
@@ -73,15 +73,15 @@
                                         />
                                     </HBox>
                                     <Label
-                                        id="_IDLabel4"
+                                        id="label_productionPlant_createProduct"
                                         text="Production Plant"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                    <HBox id="_IDHBox2">
+                                    <HBox id="productionPlantHBox_createProduct">
                                         <Input
-                                            id="productionplantinput"
+                                            id="productionPlantInput_createProduct"
                                             showValueHelp="true"
                                             valueHelpRequest="onProductionPlantValueHelp"
                                             width="200px"
@@ -89,54 +89,53 @@
                                         />
                                     </HBox>
                                     <Label
-                                        id="_IDGenLabe2l7"
+                                        id="label_startDate_createProduct"
                                         text="Start Date"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
                                     <DatePicker
-                                        id="DP21"
+                                        id="dpStart_createProduct"
                                         change="onSelectDate"
                                         width="200px"
-                                        ariaLabelledBy=""
                                     />
                                     <Label
-                                        id="_IDGenLabel28"
+                                        id="label_endDate_createProduct"
                                         text="End Date"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
                                     <DatePicker
-                                        id="DP22"
+                                        id="dpEnd_createProduct"
                                         change="onSelectDate"
                                         width="200px"
                                     />
 
                                     <Label
-                                        id="_IDLabel5"
+                                        id="label_prodQuantity_createProduct"
                                         text="Production Quantity"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="_IDGenHBox42">
+                                    <HBox id="prodQuantityHBox_createProduct">
                                         <Input
-                                            id="division_id"
+                                            id="productionQuantityInput_createProduct"
                                             width="200px"
                                             type="Number"
                                         />
                                     </HBox>
 
-                                    <core:Title id="_IenTitle2" />
+                                    <core:Title id="title_createProduct2" />
                                     <Label
-                                        id="orderTypeLabel"
+                                        id="orderTypeLabel_createProduct"
                                         text="Order Type"
                                         design="Bold"
                                         required="true"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="orderTypeHBox">
+                                    <HBox id="orderTypeHBox_createProduct">
                                         <Input
-                                            id="orderTypeInput"
+                                            id="orderTypeInput_createProduct"
                                             width="200px"
                                             showValueHelp="true"
                                             valueHelpRequest="onOrderTypeValueHelp"
@@ -145,15 +144,15 @@
                                     </HBox>
 
                                     <Label
-                                        id="workCenterLabel"
+                                        id="workCenterLabel_createProduct"
                                         text="Work Center"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                         required="true"
                                     />
-                                    <HBox id="workCenterHBox">
+                                    <HBox id="workCenterHBox_createProduct">
                                         <Input
-                                            id="workCenterInput"
+                                            id="workCenterInput_createProduct"
                                             showValueHelp="true"
                                             valueHelpRequest="onWorkCenterValueHelp"
                                             width="200px"
@@ -163,34 +162,29 @@
                                     </HBox>
 
                                     <Label
-                                        id="_IDLabel16"
+                                        id="label_priority_createProduct"
                                         text="Priority"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="_IDGenHBox15">
+                                    <HBox id="priorityHBox_createProduct">
                                         <Select
-                                            id="division_id17"
+                                            id="prioritySelect_createProduct"
                                             width="200px"
                                             selectedKey=""
                                         >
                                             <core:Item
-                                                id="_IDGenItem1"
-                                                key=""
-                                                text="--Select--"
-                                            />
-                                            <core:Item
-                                                id="_IDGenItem2"
+                                                id="priorityItem_select_createProduct1"
                                                 key="high"
                                                 text="High"
                                             />
                                             <core:Item
-                                                id="_IDGenItem3"
+                                                id="priorityItem_select_createProduct2"
                                                 key="medium"
                                                 text="Medium"
                                             />
                                             <core:Item
-                                                id="_IDGenItem4"
+                                                id="priorityItem_select_createProduct3"
                                                 key="low"
                                                 text="Low"
                                             />
@@ -198,14 +192,14 @@
                                     </HBox>
 
                                     <Label
-                                        id="_IDnLabel7"
+                                        id="remarksLabel_createProduct"
                                         text="Remarks"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="_IDGenHBox18">
+                                    <HBox id="remarksHBox_createProduct">
                                         <Input
-                                            id="ShipTP_id19"
+                                            id="remarksInput_createProduct"
                                             width="200px"
                                             required="true"
                                         />
@@ -213,11 +207,11 @@
                                 </form:content>
                             </form:SimpleForm>
                             <HBox
-                                id="_IDGenHBox"
+                                id="submitHBox_createProduct"
                                 justifyContent="End"
                             >
                                 <Button
-                                    id="eeee"
+                                    id="submitButton_createProduct"
                                     text="Submit"
                                     type="Emphasized"
                                     press="onClickSumbitButton"
@@ -226,142 +220,20 @@
                         </IconTabFilter>
 
                         <IconTabFilter
-                            id="_IDGenIconTabFilter2"
+                            id="iconTabFilter_goodIssue_createProduct"
                             key="itemDetails"
                             text="Good Issue"
                             icon="sap-icon://activity-items"
-                            enabled="true"
                         >
                             <form:SimpleForm
-                                id="_IDGenSimpleForm2"
+                                id="simpleForm_goodIssue_createProduct"
                                 class="tableBorder sapUiTinyMargin"
                                 editable="true"
                             >
                                 <form:content>
-                                    <!-- <core:Title id="_IDGenTitle2wee1" />
-                                    <Label
-                                        id="_IDGenLabel9"
-                                        text="Items"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox2">
-                                        <Input
-                                            id="_IDGenInput"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel15"
-                                        text="Components"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox3">
-                                        <Input
-                                            id="_IDGenInput1"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel16"
-                                        text="Description"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox8">
-                                        <Input
-                                            id="_IDGenInput2"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel17"
-                                        text="Request Quantity"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox9">
-                                        <Input
-                                            id="_IDGenInput3"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel18"
-                                        text="UOM"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox10">
-                                        <Input
-                                            id="_IDGenInput4"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <core:Title id="titlw" />
-                                    <Label
-                                        id="_IDGenLabel19"
-                                        text="Item Capacity"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox11">
-                                        <Input
-                                            id="_IDGenInput5"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel20"
-                                        text="Plant"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox12">
-                                        <Input
-                                            id="_IDGenInput6"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel21"
-                                        text="Batch"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox13">
-                                        <Input
-                                            id="_IDGenInput7"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox>
-                                    <Label
-                                        id="_IDGenLabel22"
-                                        text="Storage Location"
-                                        design="Bold"
-                                        class="sapUiTinyMarginTop"
-                                    />
-                                    <HBox id="_IDGenHBox14">
-                                        <Input
-                                            id="_IDGenInput8"
-                                            width="200px"
-                                            required="true"
-                                        />
-                                    </HBox> -->
-
                                     <Table
-                                        id="createTypeTableew"
+                                        id="table_createProduct"
                                         width="auto"
-                                        contextualWidth="Auto"
                                         class="borderedTable"
                                         sticky="ColumnHeaders"
                                         noDataText="Loading ..."
@@ -369,141 +241,114 @@
                                     >
                                         <columns>
                                             <Column
-                                                id="_IDGenColumn1ee"
+                                                id="column_items_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele1"
+                                                    id="label_items_createProduct"
                                                     text="Items"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumne2"
+                                                id="column_components_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                             >
                                                 <Label
-                                                    id="_IDGenLabel6e"
+                                                    id="label_components_createProduct"
                                                     text="Components"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumn4e"
+                                                id="column_description_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele10"
+                                                    id="label_description_createProduct"
                                                     text="Description"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumne5"
+                                                id="column_requestQuantity_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                             >
                                                 <Label
-                                                    id="_IDGenLabeel11"
+                                                    id="label_requestQuantity_createProduct"
                                                     text="Request Quantity"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumn6e"
+                                                id="column_uom_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele12"
+                                                    id="label_uom_createProduct"
                                                     text="UOM"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumn7e"
+                                                id="column_itemCapacity_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                                 mergeDuplicates="true"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele13"
+                                                    id="label_itemCapacity_createProduct"
                                                     text="Item Capacity"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumn72e"
+                                                id="column_plant_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                                 mergeDuplicates="true"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele132"
+                                                    id="label_plant_createProduct"
                                                     text="Plant"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumhn8e"
+                                                id="column_storageLocation_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                                 mergeDuplicates="true"
                                             >
                                                 <Label
-                                                    id="_IDGenLabele14"
+                                                    id="label_storageLocation_createProduct"
                                                     text="Storage Location"
                                                 />
                                             </Column>
                                             <Column
-                                                id="_IDGenColumn8ee"
+                                                id="column_batch_createProduct"
                                                 width="70px"
                                                 hAlign="Center"
                                                 mergeDuplicates="true"
                                             >
                                                 <Label
-                                                    id="_IDGenLabel1ee4"
+                                                    id="label_batch_createProduct"
                                                     text="Batch"
                                                 />
                                             </Column>
                                         </columns>
                                         <ColumnListItem
-                                            id="_IDGenColumneListItem"
+                                            id="columnListItem_createProduct"
                                             press="onMaterialRowSelect"
                                         >
                                             <cells>
-                                                <Input
-                                                    id="_IDGenTexte"
-                                                    value="Items"
-                                                />
-                                                <Input
-                                                    id="_IDGenText1e"
-                                                    value="Components"
-                                                />
-                                                <Input
-                                                    id="_IDGenText3e"
-                                                    value="Description"
-                                                />
-                                                <Input
-                                                    id="_IDGenText4e"
-                                                    value="Request Quantity"
-                                                />
-                                                <Input
-                                                    id="_IDGenText5e"
-                                                    value="UOM"
-                                                />
-                                                <Input
-                                                    id="_IDGenText6e"
-                                                    value="Item Capacity"
-                                                />
-                                                <Input
-                                                    id="_IDGenTexte36"
-                                                    value="Plant"
-                                                />
-                                                <Input
-                                                    id="_IDGenText3e6e"
-                                                    value="Batch"
-                                                />
-                                                <Input
-                                                    id="iiww"
-                                                    value="Storage Location"
-                                                />
+                                                <Input id="input_items_createProduct" value="Items"/>
+                                                <Input id="input_components_createProduct" value="Components" />
+                                                <Input id="input_description_createProduct" value="Description"/>
+                                                <Input id="input_requestQuantity_createProduct" value="Request Quantity"/>
+                                                <Input id="input_uom_createProduct" value="UOM"/>
+                                                <Input id="input_itemCapacity_createProduct" value="Item Capacity"/>
+                                                <Input id="input_plant_createProduct" value="Plant"/>
+                                                <Input id="input_batch_createProduct" value="Storage Location"/>
+                                                <Input id="input_storageLocation_createProduct" value="Batch"/>
                                             </cells>
                                         </ColumnListItem>
                                     </Table>
@@ -512,29 +357,27 @@
                         </IconTabFilter>
 
                         <IconTabFilter
-                            id="_IDGenIconTabFilter2w"
+                            id="iconTabFilter_confirmation_createProduct"
                             key="itemDetails"
                             text="Confirmation"
                             icon="sap-icon://bbyd-active-sales"
-                            enabled="true"
                         >
                             <form:SimpleForm
-                                id="_IDGenSimpleForm2w"
+                                id="simpleForm_confirmation_createProduct"
                                 class="tableBorder sapUiTinyMargin"
                                 editable="true"
                             >
                                 <form:content>
-                                    <core:Title id="_IDGenTitle2e1" />
-
+                                    <core:Title id="title_confirmation_createProduct" />
                                     <Label
-                                        id="_IDLabel6"
+                                        id="label_deliveryQuantity_createProduct"
                                         text="Delivery Quantity"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="_IDHBox3">
+                                    <HBox id="deliveryQuantityHBox_createProduct">
                                         <Input
-                                            id="distChan_id"
+                                            id="deliveryQuantityInput_createProduct"
                                             width="200px"
                                             type="Number"
                                         />
@@ -542,30 +385,29 @@
                                 </form:content>
                             </form:SimpleForm>
                         </IconTabFilter>
+                        
                         <IconTabFilter
-                            id="_IDGenIconTabFilterf2"
+                            id="iconTabFilter_goodReceipt_createProduct"
                             key="itemDetails"
                             text="Good Receipt"
                             icon="sap-icon://receipt"
-                            enabled="true"
                         >
                             <form:SimpleForm
-                                id="_IDGenSimpleFormf2"
+                                id="simpleForm_goodReceipt_createProduct"
                                 class="tableBorder sapUiTinyMargin"
                                 editable="true"
                             >
                                 <form:content>
-                                    <core:Title id="_IDGenTitlwe2e1" />
-
+                                    <core:Title id="title_goodReceipt_createProduct" />
                                     <Label
-                                        id="_IDLabel6w"
+                                        id="label_deliveryQuantity_goodReceipt_createProduct"
                                         text="Delivery Quantity"
                                         design="Bold"
                                         class="sapUiTinyMarginTop"
                                     />
-                                    <HBox id="_IDHBox3d">
+                                    <HBox id="deliveryQuantityHBox_goodReceipt_createProduct">
                                         <Input
-                                            id="distChafn_id"
+                                            id="deliveryQuantityInput_goodReceipt_createProduct"
                                             width="200px"
                                             type="Number"
                                         />

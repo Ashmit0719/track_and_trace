@@ -13,16 +13,38 @@ sap.ui.define([
         },
 
         onMaterialValuehelpClick: function (oEvent) {
-
             this._oInputField = oEvent.getSource().getBindingContext();
-
+            
+            // Check if the dialog is already created
             if (!this._oMaterialDialog) {
                 this._oMaterialDialog = sap.ui.xmlfragment("app.home.fragments.material", this);
                 this.getView().addDependent(this._oMaterialDialog);
             }
-            // Open the dialog
-            this._oMaterialDialog.open();
+            
+            // Show busy indicator
+            sap.ui.core.BusyIndicator.show(0); // Delay set to 0 for immediate visibility
+            
+            // Fetch data from OData V4 service using list binding
+            const oODataModel = this.getView().getModel(); // Assuming the default model is OData V4
+            const oBinding = oODataModel.bindList("/ztrack_material");
+            
+            // Trigger data loading
+            oBinding.requestContexts().then((aContexts) => {
+                const aMaterials = aContexts.map((oContext) => oContext.getObject());
+                const oMaterialModel = new sap.ui.model.json.JSONModel({ value: aMaterials });
+                this.getView().setModel(oMaterialModel, "materialModel");
+                
+                // Open the dialog
+                this._oMaterialDialog.open();
+            }).catch(() => {
+                sap.m.MessageBox.error("Failed to fetch material data.");
+            }).finally(() => {
+                // Hide busy indicator
+                sap.ui.core.BusyIndicator.hide();
+            });
         },
+        
+        
 
         onMaterialFilterSearch: function (oEvent) {
             // Get the search query
@@ -41,7 +63,7 @@ sap.ui.define([
                 // Retrieve the selected material name
                 var sSelectedMaterial = oSelectedItem.getTitle();
                 // Set the value in the input field
-                this.getView().byId("materialInput").setValue(sSelectedMaterial);
+                this.getView().byId("materialInput_createProduct").setValue(sSelectedMaterial);
             }
             // Clear filters after selection or cancel
             oEvent.getSource().getBinding("items").filter([]);
@@ -75,7 +97,7 @@ sap.ui.define([
                 // Retrieve the selected production plant value
                 var sSelectedProductionPlant = oSelectedItem.getTitle();
                 // Set the value in the input field
-                this.getView().byId("productionplantinput").setValue(sSelectedProductionPlant);
+                this.getView().byId("productionPlantInput_createProduct").setValue(sSelectedProductionPlant);
             }
             // Clear filters after selection or cancel
             oEvent.getSource().getBinding("items").filter([]);
@@ -110,7 +132,7 @@ sap.ui.define([
                 // Retrieve the selected work center value
                 var sSelectedWorkCenter = oSelectedItem.getTitle();
                 // Set the value in the input field
-                this.getView().byId("workCenterInput").setValue(sSelectedWorkCenter);
+                this.getView().byId("workCenterInput_createProduct").setValue(sSelectedWorkCenter);
             }
             // Clear filters after selection or cancel
             oEvent.getSource().getBinding("items").filter([]);
@@ -151,48 +173,7 @@ sap.ui.define([
 
 
 
-        onClickSumbitButton: function () {
-                // Gather values from the form
-                debugger;
-                var materialName = this.byId("materialInput").getValue();
-                var productionPlant = this.byId("productionplantinput").getValue();
-                var startDate = this.byId("DP21").getDateValue();
-                var endDate = this.byId("DP22").getDateValue();
-                var productionQuantity = this.byId("division_id").getValue();
-                var orderType = this.byId("orderTypeInput").getValue();
-                var deliveryQuantity = this.byId("distChan_id").getValue();
-                var workCenter = this.byId("workCenterInput").getValue();
-                var priority = this.byId("division_id17").getSelectedKey();
-                var remarks = this.byId("ShipTP_id19").getValue();
-                
-                // Create payload object for productionOrder
-                let oModel = this.getView().getModel();
-                let oBindList = oModel.bindList("/productionOrder");
-
-
-                var productionOrder = {
-                    batchID: Math.floor(Math.random() * 1000),  // Example, you may need to generate this differently
-                    materialName: materialName,
-                    materialID: 123,  // Example, replace with actual ID if available
-                    productionPlant: productionPlant,
-                    productionID: Math.floor(Math.random() * 1000),  // Example, replace with actual ID if available
-                    productionQuantity: parseInt(productionQuantity, 10),
-                    startDate: startDate,
-                    endDate: endDate,
-                    manufacturingDate: new Date(),  // Set to current date as an example
-                    expiryDate: new Date(),  // Set to current date as an example
-                    deliveryQuantity: parseInt(deliveryQuantity, 10),
-                    orderType: orderType,
-                    priority: priority,
-                    workCenter: workCenter,
-                    Remark: remarks,
-                    status: "New"  // Example, you can set the status according to your logic
-                };
-    
-                // Bind the list to the OData model and create the entry
-               
-            }
-    
+       
         
 
 

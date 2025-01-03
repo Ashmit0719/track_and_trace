@@ -9,7 +9,7 @@
         search=".onMaterialFilterSearch"
         confirm="onMaterialValueHelpClose"
         cancel="onMaterialValueHelpClose"
-        items="{/material}"
+        items="{materialModel>/value}"
         initialFocus="SearchField"
         multiSelect="false"
         contentWidth="480px"
@@ -18,7 +18,7 @@
         
         <StandardListItem id="_IDGenStandardListItem" 
             
-            title="{materialName}"
+            title="{materialModel>MaterialDesc}"
             iconDensityAware="false"
             iconInset="false"
             type="Active" />
